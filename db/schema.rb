@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_11_09_202445) do
   create_table "movie_queues", force: :cascade do |t|
     t.integer "movie_id"
     t.integer "queue_id"
+    t.integer "priority"
   end
 
   create_table "movies", force: :cascade do |t|
@@ -33,8 +34,6 @@ ActiveRecord::Schema.define(version: 2020_11_09_202445) do
 
   create_table "queues", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "movie_queue_id"
-    t.integer "priority"
   end
 
   create_table "reviews", force: :cascade do |t|

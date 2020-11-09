@@ -1,6 +1,5 @@
 class MovieQueue < ActiveRecord::Base
-    has_many :queues
-    has_many :movies
-    has_many :movies
+    belongs_to :queues
+    belongs_to :movies
 
 end
