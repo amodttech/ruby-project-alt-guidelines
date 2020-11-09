@@ -19,14 +19,7 @@ r4 = Review.create(u2, m1, 2)
 r5 = Review.create(u2, m3, 6.2)
 r6 = Review.create(u2, m4, 10)
 
-q1 = Queue.create(u1, mq1, 5)
-q2 = Queue.create(u2, mq2, 2)
-# q3 = Queue.create()
-# q4 = Queue.create()
 
-
-mq1 = MovieQueue.create(m4, q1)
-mq2 = MovieQueue.create(m2, q2)
 
 
 
