@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_11_09_200954) do
 
-  create_table "friend", force: :cascade do |t|
+  create_table "friends", force: :cascade do |t|
     t.integer "user_1_id"
     t.integer "user_2_id"
   end
