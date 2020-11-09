@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_09_200954) do
+ActiveRecord::Schema.define(version: 2020_11_09_202445) do
 
   create_table "friends", force: :cascade do |t|
     t.integer "user_1_id"
     t.integer "user_2_id"
+  end
+
+  create_table "movie_queues", force: :cascade do |t|
+    t.integer "movie_id"
+    t.integer "queue_id"
   end
 
   create_table "movies", force: :cascade do |t|
