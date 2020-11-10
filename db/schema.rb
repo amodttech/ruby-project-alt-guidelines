@@ -12,15 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2020_11_09_202445) do
 
+  create_table "Addmovietomovielists", force: :cascade do |t|
+    t.integer "movie_id"
+    t.integer "movielist_id"
+    t.integer "priority"
+  end
+
   create_table "friends", force: :cascade do |t|
     t.integer "user_1_id"
     t.integer "user_2_id"
   end
 
-  create_table "movie_queues", force: :cascade do |t|
-    t.integer "movie_id"
-    t.integer "queue_id"
-    t.integer "priority"
+  create_table "movielists", force: :cascade do |t|
+    t.integer "user_id"
   end
 
   create_table "movies", force: :cascade do |t|
@@ -30,10 +34,6 @@ ActiveRecord::Schema.define(version: 2020_11_09_202445) do
     t.string "genre"
     t.string "country"
     t.string "synopsis"
-  end
-
-  create_table "queues", force: :cascade do |t|
-    t.integer "user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
